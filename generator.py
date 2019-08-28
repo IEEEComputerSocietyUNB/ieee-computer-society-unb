@@ -9,7 +9,7 @@ import shutil
 
 def generate_category(category):
     if category not in os.listdir('output'):
-        os.makedirs(f'output/{category}')
+        os.mkdir(f'output/{category}')
     posts = read_markdown_files(category)
     create_index(posts, category)
     create_posts(posts, category)
