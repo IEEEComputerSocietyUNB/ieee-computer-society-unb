@@ -26,7 +26,18 @@ also it's good to understand a bit more about site performance.
 Assuming you already created and activated a virtual environment 
 
 ```shell script
-python converter.py
+python generator.py
+```
+
+## Merging changes
+
+```
+For a Merge Request to be accepted in develop, a branch must have all linters running with no problem.
+
+To be accepted in staging, it must be approved by @alexandrebarbaruiva
+
+To be accepted in master, it must be approved by @tapumar and @anna_thais
+
 ```
 
 # References
