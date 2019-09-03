@@ -29,6 +29,9 @@ Assuming you already created and activated a virtual environment
 python generator.py
 ```
 
+## What to commit
+
+
 ## Merging changes
 
 ```
