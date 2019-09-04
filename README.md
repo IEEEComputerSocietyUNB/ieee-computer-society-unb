@@ -1,4 +1,6 @@
 [![Netlify Status](https://api.netlify.com/api/v1/badges/25d1f9af-bfec-4f6f-b521-28f17722360a/deploy-status)](https://app.netlify.com/sites/ieeecomputersociety/deploys)
+[![Maintainability](https://api.codeclimate.com/v1/badges/1860d64afd80c3687fb6/maintainability)](https://codeclimate.com/github/IEEEComputerSocietyUNB/ieee-computer-society-unb/maintainability)
+[![Test Coverage](https://api.codeclimate.com/v1/badges/1860d64afd80c3687fb6/test_coverage)](https://codeclimate.com/github/IEEEComputerSocietyUNB/ieee-computer-society-unb/test_coverage)
 
 # IEEE Computer Society UnB Site
 
@@ -42,11 +44,11 @@ To be accepted in master, it must be approved by @tapumar and @anna_thais
 
 # References
 
-https://mxb.dev/blog/how-to-turn-your-website-into-a-pwa/
-https://developers.google.com/web/fundamentals/codelabs/your-first-pwapp/?hl=pt-br
-https://serviceworke.rs/
-https://codelabs.developers.google.com/codelabs/migrate-to-progressive-web-apps/index.html#0
-https://www.reddit.com/r/webdev/comments/cwhaop/do_you_really_develop_mobile_first/
-https://www.pwabuilder.com/
-http://www.html-tidy.org/
-https://imagemagick.org/index.php
+- https://mxb.dev/blog/how-to-turn-your-website-into-a-pwa/
+- https://developers.google.com/web/fundamentals/codelabs/your-first-pwapp/?hl=pt-br
+- https://serviceworke.rs/
+- https://codelabs.developers.google.com/codelabs/migrate-to-progressive-web-apps/index.html#0
+- https://www.reddit.com/r/webdev/comments/cwhaop/do_you_really_develop_mobile_first/
+- https://www.pwabuilder.com/
+- http://www.html-tidy.org/
+- https://imagemagick.org/index.php
