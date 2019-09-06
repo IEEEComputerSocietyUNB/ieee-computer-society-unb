@@ -33,12 +33,13 @@ def read_markdown_files(category):
 
 def create_index(posts, category):
     # Loads jinja stuff
-    env = Environment(loader=PackageLoader('generator', f'templates/'))
+    env = Environment(loader=PackageLoader('generator', 'templates/'))
     index_template = env.get_template(f'{category}/index.html')
 
     posts_metadata = [posts[post].metadata for post in posts]
     tags = [post['tags'] for post in posts_metadata]
-    index_html = index_template.render(posts=posts_metadata, tags=tags)
+    configs = get_all_config_vars()
+    index_html = index_template.render(configs, posts=posts_metadata, tags=tags)
 
     with open(f'output/{category}/index.html', 'w') as file:
         file.write(index_html)
@@ -56,13 +57,17 @@ def create_posts(posts, category):
             'title': post_metadata['title'],
             'date': post_metadata['date']
         }
-
-        post_html = post_template.render(post=post_data)
+        configs = get_all_config_vars()
+        post_html = post_template.render(configs, post=post_data)
         post_file_path = f'output/{category}/{post_metadata["slug"]}.html'
 
         os.makedirs(os.path.dirname(post_file_path), exist_ok=True)
         with open(post_file_path, 'w') as file:
             file.write(post_html)
+
+
+def get_all_config_vars():
+    return {item: getattr(config, item) for item in dir(config) if not item.startswith("__")}
 
 
 def generate_main_pages():
@@ -75,7 +80,7 @@ def generate_main_pages():
         index_template = env.get_template(f'main/{page}')
 
         # Gets all attributes (such as github url) from config file and puts on `configs` variable
-        configs = {item: getattr(config, item) for item in dir(config) if not item.startswith("__")}
+        configs = get_all_config_vars()
         # Renders the html with all config attributes in their places
         index_html = index_template.render(configs)
         # Saves the rendered html
