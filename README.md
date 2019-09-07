@@ -33,8 +33,8 @@ python generator.py
 
 Commit your changes on output
 ```
-git add output
-git commit
+git add .
+git commit -m "Add output"
 ```
 
 ## Merging changes
