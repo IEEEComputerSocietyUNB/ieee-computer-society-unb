@@ -6,7 +6,7 @@
 
 This is the IEEE Computer Society UnB site, it's a simple site that uses a simple
 custom static page generator and [Jinja 2](http://jinja.palletsprojects.com/en/2.10.x/),
-a templating tool, for News and Coding Dojo articles.
+a templating tool, for News and Coding Dojo adasdasdasdrticles.
 
 While it's main pages are mostly static, we have a few sections that are constantly
 being updated with new information. Such sections are the Dojo and the News sections.
