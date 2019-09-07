@@ -31,6 +31,12 @@ Assuming you already created and activated a virtual environment
 python generator.py
 ```
 
+Commit your changes on output
+```
+git add output
+git commit
+```
+
 ## Merging changes
 
 ```
