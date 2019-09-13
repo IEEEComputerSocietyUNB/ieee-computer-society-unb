@@ -1,0 +1,7 @@
+repos:
+-       repo: https://github.com/motet-a/jinjalint.git
+        rev: 01e0a4d8f1ee775aee00eb9d715eff2b4cc49e4d
+        hooks:
+        -       id: jinjalint
+                types: [file]
+                files: \.(html|sls)$
