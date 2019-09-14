@@ -1,3 +1,4 @@
 markdown2
 jinja2
 invoke
+flake8
