@@ -103,3 +103,7 @@ venv.bak/
 
 # mypy
 .mypy_cache/
+
+# text editor settings
+.vscode/
+.idea/
