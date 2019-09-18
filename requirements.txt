@@ -2,5 +2,4 @@ markdown2
 jinja2
 invoke
 jinjalint
-pre-commit
-yaml
+pyYAML
