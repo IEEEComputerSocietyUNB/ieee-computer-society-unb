@@ -2,3 +2,6 @@ markdown2
 jinja2
 invoke
 flake8
+jinjalint
+pre-commit
+yaml
