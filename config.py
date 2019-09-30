@@ -6,6 +6,7 @@ This file contains all settings for generating the site properly
 
 AUTHOR = 'IEEE Computer Society UnB'
 SITENAME = 'IEEE Computer Society UnB'
+SITENAME2 = 'IEEE CS UnB'
 SITEURL = ''
 
 # URLs
