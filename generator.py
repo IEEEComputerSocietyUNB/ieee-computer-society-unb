@@ -37,7 +37,7 @@ def read_markdown_files(category):
 
 def create_index(posts, category):
     # Loads jinja stuff
-    env = Environment(loader=PackageLoader("generator", f"templates/"))
+    env = Environment(loader=PackageLoader("generator", f"templates/"), autoescape=True)
     index_template = env.get_template(f"{category}/index.html")
 
     posts_metadata = [posts[post].metadata for post in posts]
@@ -49,7 +49,7 @@ def create_index(posts, category):
 
 
 def create_posts(posts, category):
-    env = Environment(loader=PackageLoader("generator", f"templates/"))
+    env = Environment(loader=PackageLoader("generator", f"templates/"), autoescape=True)
     post_template = env.get_template(f"{category}/{category}.html")
 
     for post in posts:
@@ -75,7 +75,7 @@ def generate_main_pages():
     :return:
     """
     for page in os.listdir("templates/main"):
-        env = Environment(loader=PackageLoader("generator", f"templates/"))
+        env = Environment(loader=PackageLoader("generator", f"templates/"), autoescape=True)
         index_template = env.get_template(f"main/{page}")
 
         # Gets all attributes (such as github url) from config file and puts on `configs` variable
