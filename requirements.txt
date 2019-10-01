@@ -1,6 +1,12 @@
-markdown2
-jinja2
-invoke
+attrs==17.2.0
+black
+codecov
+coverage
 flake8
+green
+invoke
+jinja2
 jinjalint
+markdown2
+pytest
 pyYAML
