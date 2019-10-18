@@ -1,11 +1,17 @@
-{% extends "base.html" %}
+{% extends "base.html" %} {% block content %}
+<div class="container">
+    <div class="row">
+        <div class="col-md-6 flex three demo">
+            <h1>{{post.title}}</h1>
+            {{post.content | safe}}
+        </div>
+        <div class="col-md-1"></div>
+        <div class="col-md-5 relative align-self-center">
+            <img src="{{ IMAGEPATH }}/dojo/edward.jpg" alt="Mestre {{ post.master }}" class="img-fluid rounded">
+        </div>
+    </div>
+    <p>Artigo criado em: {{ post.date }}</p>
 
-{% block content %}
-
-<h1>{{post.title}}</h1>
-<p>
-    <small>{{post.date}}</small>
-    {{post.content}}
-</p>
+</div>
 
 {% endblock %}

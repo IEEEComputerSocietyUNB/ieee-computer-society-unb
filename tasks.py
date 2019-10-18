@@ -16,7 +16,7 @@ from invoke import task
 @task
 def run(c):
     """ Runs generator and opens home page """
-    c.run("python generator.py")
+    c.run("python generator.py", pty=True)
     html(c)
 
 
@@ -31,4 +31,4 @@ def travis(c):
     """ Runs Travis CI test suite  """
     c.run("flake8 .")
     c.run("jinjalint --parse-only templates")
-    c.run("bandit .")
+    c.run("bandit generator.py")
