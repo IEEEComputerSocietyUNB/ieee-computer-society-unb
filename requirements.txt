@@ -5,6 +5,7 @@ coverage
 flake8
 green
 invoke
+ipdb
 jinja2
 jinjalint
 markdown2

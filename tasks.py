@@ -31,4 +31,4 @@ def travis(c):
     """ Runs Travis CI test suite  """
     c.run("flake8 .")
     c.run("jinjalint --parse-only templates")
-    c.run("bandit .")
+    c.run("bandit generator.py")
