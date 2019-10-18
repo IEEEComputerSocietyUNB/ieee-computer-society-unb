@@ -14,6 +14,13 @@ from invoke import task
 #     c.run(f"coverage html {all_classes}")
 
 @task
+def run(c):
+    """ Runs generator and opens home page """
+    c.run("python generator.py")
+    html(c)
+
+
+@task
 def html(c):
     """ Opens site home page """
     c.run("python -m webbrowser -t \"output/index.html\"")
