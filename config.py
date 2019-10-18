@@ -1,12 +1,18 @@
 """
 This file contains all settings for generating the site properly
 """
+import os
 
 # Basics
 
 AUTHOR = 'IEEE Computer Society UnB'
 SITENAME = 'IEEE Computer Society UnB'
+SITEPATH = os.getcwd() + '/output'
 SITEURL = ''
+
+# Static info
+
+IMAGEPATH = SITEPATH + '/static/images'
 
 # URLs
 

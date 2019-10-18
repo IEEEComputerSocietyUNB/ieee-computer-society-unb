@@ -2,7 +2,7 @@
 title: Sweetened Condensed Milk Cake
 date: 23-08-19
 tags: Cake, Sweet
-thumbnail: ../img/bread.jpg
+thumbnail: home-office.jpg
 summary: A sweet and soft cake which is very easy to prepare and tastes great with a cup of tea.
 slug: condensed-milk
 ---

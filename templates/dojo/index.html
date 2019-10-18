@@ -3,37 +3,42 @@
 <h1>My Recipes</h1>
 
 <div class="flex three demo">
+    <section class="jumbotron text-center jumbotron-dojo">
+        <div class="container">
+            <h1 class="jumbotron-heading">Coding Dojo UnB</h1>
+            <p class="lead text-muted">Descrição breve sobre o Coding Dojo UnB, mais ou menos do mesmo tamanho desta frase para o visitante se informar melhor sobre o projeto em si! Colocar uma foto legal ao fundo deste texto.</p>
+            <p>
+                <a href="#" class="btn btn-primary my-2">Main call to action</a>
+                <a href="#" class="btn btn-secondary my-2">Secondary action</a>
+            </p>
+        </div>
+    </section>
 
-    {% for post in posts %}
+    <div class="album py-5 bg-light">
+        <div class="container">
+            <div class="row">
+                {% for post in posts %}
+                <div class="col-md-4">
+                    <div class="card mb-4 box-shadow">
+                        <img class="card-img-top" src="{{IMAGEPATH}}/dojo/{{post.thumbnail}}" alt="Card image cap">
+                        <div class="card-body">
+                            <p class="card-text">{{ post.title }}</p>
+                            <p class="card-text">{{ post.summary }}</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div class="btn-group">
+                                    <a class="btn btn-primary" href="{{ post.slug }}.html">Saiba mais</a>
+                                </div>
+                                <small class="text-muted">9 mins</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
 
-    <div>
-
-        <article class="card">
-            <header>
-                <img src="{{ post.thumbnail }}">
-            </header>
-            <footer>
-                <h2>{{ post.title }}</h2>
-                <small>{{ post.date }}</small>
-                <p>
-                    {{ post.summary}}
-                </p>
-                <a class="button" href="{{ post.slug }}.html">Saiba mais</a>
-                <br> {% set list_of_tags = post.tags.split(",") %} {% for tag in list_of_tags %}
-                <button class="shyButton mybutton">{{ tag }}</button> {% endfor %}
-            </footer>
-
-        </article>
-
+            </div>
+        </div>
     </div>
 
-    <!--
-        <p>
-                <h2>{{loop.index}}: <a href="posts/{{ post.slug }}.html">{{post.title}}</a> <small>{{post.date}}</small></h2>
-                {{post.summary}}
-            </p> -->
-
-    {% endfor %}
 
 </div>
 

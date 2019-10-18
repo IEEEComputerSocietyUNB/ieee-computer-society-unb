@@ -1,5 +1,17 @@
 {% extends "base.html" %}
-{%block content%}
+
+{% block head_append %}
+{{ super() }}
+<!-- Custom styles for this template -->
+<link href="static/css/carousel.css" rel="stylesheet">
+
+<!-- Just to make our placeholder images work. Remove ASAP -->
+<script src="static/js/holder.min.js"></script>
+
+
+{% endblock %}
+
+{% block content %}
 <section id="content">
 
     <div id="myCarousel" class="carousel slide" data-ride="carousel">
