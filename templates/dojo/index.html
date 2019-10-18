@@ -1,6 +1,4 @@
-{% extends "base.html" %}
-
-{% block content %}
+{% extends "base.html" %} {% block content %}
 
 <h1>My Recipes</h1>
 
@@ -20,12 +18,9 @@
                 <p>
                     {{ post.summary}}
                 </p>
-                <a class="button" href="posts/{{ post.slug }}.html">Recipe</a>
-                <br>
-                {% set list_of_tags = post.tags.split(",") %}
-                {% for tag in list_of_tags %}
-                <button class="shyButton mybutton">{{ tag }}</button>
-                {% endfor %}
+                <a class="button" href="{{ post.slug }}.html">Saiba mais</a>
+                <br> {% set list_of_tags = post.tags.split(",") %} {% for tag in list_of_tags %}
+                <button class="shyButton mybutton">{{ tag }}</button> {% endfor %}
             </footer>
 
         </article>
