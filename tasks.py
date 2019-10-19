@@ -21,6 +21,12 @@ def run(c):
 
 
 @task
+def build(c):
+    """ Builds site for Netlify """
+    c.run("python generator.py")
+
+
+@task
 def html(c):
     """ Opens site home page """
     c.run("python -m webbrowser -t \"output/index.html\"")
