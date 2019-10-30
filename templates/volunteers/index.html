@@ -1,0 +1,38 @@
+{% extends "base.html" %} 
+{% block head_append %}
+{{ super() }}
+<!-- Custom styles for this template -->
+<link href="{{ SITEPATH }}/static/css/carousel.css" rel="stylesheet">
+
+<!-- Just to make our placeholder images work. Remove ASAP -->
+<script src="{{ SITEPATH }}/static/js/holder.min.js"></script>
+
+
+{% endblock %}
+{% block content %}
+<div class="flex three demo">
+    <section class="jumbotron text-center jumbotron-dojo">
+        <h1 class="jumbotron-heading">Página de voluntários</h1>
+    </section>
+    <div class="album py-5 bg-light">
+        <div class="container">
+            <div class="row">
+                {% for post in posts %}
+                <div class="col-md-4">
+                    <div class="card-body">
+                        <p class="card-text">{{ post.title }}</p>
+                        <p class="card-text">{{ post.summary }}</p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div class="btn-group">
+                                <a class="btn btn-primary" href="{{ post.slug }}.html">Saiba mais</a>
+                            </div>
+                            <small class="text-muted">9 mins</small>
+                        </div>
+                    </div>
+                </div>                    
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
