@@ -1,0 +1,11 @@
+{% extends "base.html" %} {% block content %}
+<div class="container">
+    <div class="row">
+        <div class="col-md-6 flex three demo">
+            <h1>{{post.title}}</h1>
+            {{post.content | safe}}
+        </div>
+    </div>
+    <p>Voluntario desde: {{ post.date }}</p>
+</div>
+{% endblock %}
