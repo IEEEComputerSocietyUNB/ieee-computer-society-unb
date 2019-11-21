@@ -1,3 +1,13 @@
-markdown2
-jinja2
+attrs==17.2.0
+black
+codecov
+coverage
+flake8
+green
 invoke
+ipdb
+jinja2
+jinjalint
+markdown2
+pytest
+pyYAML
